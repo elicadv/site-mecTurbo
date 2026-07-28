@@ -1,0 +1,219 @@
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    height:80px;
+    padding:0 30px;
+
+    background:linear-gradient(
+        180deg,
+        #1c1c1c 0%,
+        #111111 50%,
+        #080808 100%
+    );
+
+    border-bottom:2px solid #ff7a00;
+
+    box-shadow:
+        0 6px 25px rgba(0,0,0,.45);
+
+    position:sticky;
+    top:0;
+    z-index:999;
+    
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.brand{
+    display:flex;
+    align-items:center;
+    margin-top: 10px;
+}
+
+.brand-text{
+    height:200px;
+    width:auto;
+    transition:.4s;
+}
+
+.brand-text:hover{
+    transform:scale(1.03);
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    list-style:none;
+
+    margin:0;
+    padding:0;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+.menu li a{
+
+    position:relative;
+
+    display:block;
+
+    padding:12px 18px;
+
+    text-decoration:none;
+
+    font-size:30px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    border-radius:8px;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #d7d7d7 30%,
+        #8e8e8e 60%,
+        #ffffff 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+    transition:.35s;
+}
+
+/* Fundo do botão */
+
+.menu li a::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:8px;
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.02)
+    );
+
+    opacity:0;
+
+    transition:.35s;
+}
+
+/* Linha inferior */
+
+.menu li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    width:0;
+
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #ffffff,
+        #bdbdbd,
+        transparent
+    );
+
+    transition:.35s;
+}
+
+/* Hover */
+
+.menu li a:hover{
+
+    transform:translateY(-2px);
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.45),
+        0 0 15px rgba(255,255,255,.25);
+}
+
+.menu li a:hover::before{
+
+    opacity:1;
+}
+
+.menu li a:hover::after{
+
+    width:100%;
+
+    left:0;
+}
+
+/* Clique */
+
+.menu li a:active{
+
+    transform:translateY(0);
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:15px;
+    }
+
+    .brand{
+
+        margin-bottom:15px;
+    }
+
+    .brand-text{
+
+        height:60px;
+    }
+
+    .menu{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:8px;
+    }
+
+    .menu li a{
+
+        padding:10px 14px;
+
+        font-size:14px;
+    }
+
+}
