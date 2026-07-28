@@ -20,8 +20,13 @@
     align-items:center;
     justify-content:center;
 
+    background-image: url('/assets/imagens/logo-mec-turbo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 850px;
+   
 }
-.hero::before{
+/*.hero::before{
 
     content:"";
 
@@ -29,7 +34,7 @@
 
     inset:0;
 
-    background-image: url('assets/imagens/logo-mec-turbo.png');
+    background-image: url('/assets/imagens/logo-mec-turbo.png');
 
     background-repeat:no-repeat;
 
@@ -39,7 +44,8 @@
 
     opacity:.18;
 
-}
+}*/
+
 .overlay{
 
     position:absolute;
