@@ -1,96 +1,67 @@
-.hero{
+.hero {
+    position: relative;
+    height: 60vh;
 
-    position:relative;
+    background: linear-gradient(
+      135deg,
+      #5a5a5a 0%,
+      #787878 35%,
+      #9d9d9d 50%,
+      #787878 65%,
+      #5a5a5a 100%
+    
+);
+    overflow: hidden;
 
-    height:60vh;
-
-    background:
-        linear-gradient(
-            135deg,
-            #050505 0%,
-            #101010 35%,
-            #1b1b1b 50%,
-            #101010 65%,
-            #050505 100%
-        );
-
-    overflow:hidden;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background-image: url('/assets/imagens/logo-mec-turbo.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 850px;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-/*.hero::before{
 
-    content:"";
+.hero-logo{
+    position: relative;
+    z-index: 1;
 
-    position:absolute;
+    width: 850px;
+    max-width: 90%;
 
-    inset:0;
-
-    background-image: url('/assets/imagens/logo-mec-turbo.png');
-
-    background-repeat:no-repeat;
-
-    background-position:center;
-
-    background-size:clamp(420px,52vw,720px);
-
-    opacity:.18;
-
-}*/
+    height: auto;
+}
 
 .overlay{
-
     position:absolute;
-
     inset:0;
 
     background:
-
         radial-gradient(
             circle at center,
             rgba(0,0,0,.25),
             rgba(0,0,0,.82)
         );
 
+    z-index:2;
 }
-.hero::after{
 
+.hero::after{
     content:"";
 
     position:absolute;
-
     inset:0;
 
     background:
-
     repeating-linear-gradient(
-
         -60deg,
-
         transparent 0px,
-
         transparent 160px,
-
         rgba(255,122,0,.04) 161px,
-
         rgba(255,122,0,.04) 163px,
-
         transparent 164px,
-
         transparent 330px
-
     );
 
     pointer-events:none;
 
+    z-index:3;
 }
 .hero-info{
 
